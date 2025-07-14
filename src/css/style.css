@@ -1,0 +1,127 @@
+/* === Fontes === */
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+/* === Variáveis === */
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Gray: hsl(0, 0%, 42%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+/* === Corpo da Página === */
+body {
+  font-family: "Figtree", system-ui, -apple-system, sans-serif;
+  place-content: center;
+  background-color: var(--Yellow);
+  min-height: 100vh;
+  display: grid;
+
+}
+
+/* === Container Principal === */
+.container {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* === Card === */
+.card {
+  background-color: var(--White);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  outline: 1px solid var(--Black);
+}
+
+.card::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--Black);
+  top: 15px;
+  right: -15px;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+/* === Imagem do Artigo === */
+.card .artigo {
+  border-radius: 0.5rem;
+  width: 100%;
+  display: block;
+}
+
+/* === Categoria (Learning) === */
+.card .learning {
+  background-color: var(--Yellow);
+  width: max-content;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  font-weight: 800;
+  border-radius: 0.5rem;
+}
+
+/* === Data === */
+.card .data {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--Black);
+}
+
+/* === Título === */
+.card h1 {
+  margin: 1rem 0;
+}
+
+.card h1 a {
+  color: var(--Black);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.card h1 a:hover,
+.card h1 a:focus-visible {
+  color: var(--Yellow);
+}
+
+/* === Descrição === */
+.card .declaration {
+  color: var(--Gray);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+
+}
+
+/* === Autor === */
+.card .autor {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card .autor img {
+  width: 30px;
+  display: block;
+}
+
+.card .autor .nome {
+  font-weight: 800;
+}
