@@ -26,7 +26,6 @@ body {
   background-color: var(--Yellow);
   min-height: 100vh;
   display: grid;
-
 }
 
 /* === Container Principal === */
@@ -107,7 +106,6 @@ body {
   color: var(--Gray);
   line-height: 1.5;
   margin-bottom: 1rem;
-
 }
 
 /* === Autor === */
